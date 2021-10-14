@@ -22,6 +22,7 @@
     <p style="text-align: left;color: darkred;">Click on the squares to search for wild life</p>
     <p style="text-align: left;color: darkred;" id="tries">"Number of tries is zero."</p>
     <p style="text-align: left;color: darkred;" id="distance">"Distance is unknown."</p><br><br>
+    <button onclick="newGame()">Reset</button>
 <div class="container">
   <div class="row">
     <div class="col-sm-1">
@@ -100,6 +101,15 @@
           }
       }
   }
+  function newGame(){
+            triesCount = 0
+            animalLocation = Math.floor(Math.random()*23 + 0)
+            document.getElementById("tries").innerHTML = "Number of tries is 0."
+            for(var i=0; i<24; i++){
+                
+                    document.getElementById(ids[i]).src = "plant_1.jpg"
+            }
+        }
   </script>
 </body>
 
